@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic-user-interface-interactions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Drop down menu && Mobile Menus -->
+    <div class="drop-down-menu">
+      <nav class="nav">
+        <h1 class="logo">NPM</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="nav-button"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          width="38px"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <ul class="nav-elements">
+          <li><a href="#" class="link">Home</a></li>
+          <li><a href="#" class="link">About</a></li>
+          <!-- Drop down element -->
+          <li class="drop-down-element">
+            Contact
+            <ul class="drop-down-list drop-down-hidden drop-down-invisible">
+              <li class="drop-down-link">
+                <a href="#" class="link">Twitter</a>
+              </li>
+              <li class="drop-down-link">
+                <a href="#" class="link">LinkedIn</a>
+              </li>
+              <li class="drop-down-link"><a href="#" class="link">Email</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Image Slider -->
+    <div id="slider">
+      <ul id="slideWrap">
+        <li><img src="./images/image1.jpg" alt="" /></li>
+        <li><img src="./images/image2.jpg" alt="" /></li>
+        <li><img src="./images/image3.jpg" alt="" /></li>
+        <li><img src="./images/image4.jpg" alt="" /></li>
+        <li><img src="./images/image5.jpg" alt="" /></li>
+      </ul>
+    </div>
+    <!--  -->
+    <script src="index.js"></script>
+  </body>
+</html>

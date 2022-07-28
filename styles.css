@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222222;
+  color: #f1f1f1;
+  box-shadow: 0 0 20px #222222a7;
+  padding: 30px;
+}
+
+.nav-elements {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  transition: all 200ms ease-in;
+}
+
+.link:hover {
+  background: -webkit-linear-gradient(top left, #24aadd, #08c637);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.drop-down-element {
+  cursor: default;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: end;
+  transition: all 200ms ease;
+}
+
+.drop-down-element-active {
+  color: #24aadd;
+}
+
+.drop-down-list {
+  list-style: none;
+  position: absolute;
+  text-align: end;
+  background-color: #292929;
+  padding: 20px 20px 20px 40px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px #292929;
+  opacity: 1;
+  transition: 300ms all ease-in-out;
+}
+
+.drop-down-link {
+  margin: 12px 0;
+}
+
+/* Control the visibility */
+.drop-down-hidden {
+  display: none;
+}
+
+.drop-down-invisible {
+  opacity: 0;
+}
+
+/* Responsive Nav */
+#nav-button {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  #nav-button {
+    display: block;
+    z-index: 100;
+    transition: all 300ms ease-in-out;
+  }
+
+  .nav-button-active {
+    transform: rotate(270deg);
+  }
+
+  .nav-elements {
+    flex-direction: column;
+    background-color: #222222;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    left: -200%;
+    transition: all 200ms ease-in-out;
+  }
+
+  .nav-elements-active {
+    left: 0;
+  }
+
+  /* Image Slider */
+}
+
+/* Image Slider */
+#slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  transition: all 750ms ease;
+  left: 0;
+}
+
+#slider ul li {
+  position: relative;
+  height: 100%;
+
+  float: left;
+}
+
+#slider ul li img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
